@@ -88,17 +88,14 @@
         text-align: center;
     }
 
-    .hero-logo {
-        width: 144px;
-        height: 144px;
-        margin: 0 auto 20px;
-        display: block;
-        border: none;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-        object-fit: contain;
-    }
+.hero-logo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: contain;
+}
+
 
     .hero h1 {
         color: var(--white);
@@ -888,13 +885,27 @@
         transform: scale(0.97);
     }
 
-    /* ===================================
-       TABLET & DESKTOP
-       =================================== */
-    @media (min-width: 768px) {
-        body {
-            padding-bottom: 0;
-        }
+    /* MOBILE LOGO FIX — ADD THIS */
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 180px !important;
+        height: 180px !important;
+        object-fit: contain;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* ===================================
+   TABLET & DESKTOP
+   =================================== */
+@media (min-width: 768px) {
+    .hero-logo {
+        width: 288px;
+        height: 288px;
+        object-fit: contain;
+    }
+
 
         .hero-logo {
             width: 288px;
