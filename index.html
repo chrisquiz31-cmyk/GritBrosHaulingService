@@ -985,6 +985,21 @@
 
 </head>
 <body class="lang-en">
+<!-- IMAGE PATH FIX -->
+<script>
+    // Force all <img> tags inside the photo-grid to use the correct folder path
+    document.addEventListener("DOMContentLoaded", () => {
+        const photos = document.querySelectorAll('.photo-grid img');
+
+        photos.forEach(img => {
+            // If the src does NOT already start with "img/", fix it
+            if (!img.src.includes("img/")) {
+                const fileName = img.getAttribute("src").split('/').pop();
+                img.setAttribute("src", "img/" + fileName);
+            }
+        });
+    });
+</script>
 
 ```
 <!-- Language Toggle -->
